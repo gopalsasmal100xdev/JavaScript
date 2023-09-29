@@ -177,4 +177,66 @@ function removeDuplicates(arr) {
 }
 
 // console.log(removeDuplicates([1, 2, 3, 1, 1, 2, 3, 1, 4, 1]));
-console.log(removeDuplicates(["Gopal", "gopal", "gopal", "javascript"]));
+// console.log(removeDuplicates(["Gopal", "gopal", "gopal", "javascript"]));
+
+/**
+ *
+We have the following arrays :
+color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+o = ["th","st","nd","rd"]
+Write a JavaScript program to display the colors in the following way :
+"1st choice is Blue ."
+"2nd choice is Green."
+"3rd choice is Red."
+- - - - - - - - - - - - -
+Note : Use ordinal numbers to tell their position.
+
+*/
+
+function displayColor(arr, order) {}
+
+const colors = ["Blue", "Green", "Yellow", "Red", "Orange", "Indigo"];
+const order = ["th", "st", "nd", "rd"];
+displayColor(colors, order);
+
+/*
+Write a JavaScript function to filter false, null, 0 and blank values from an array.
+*/
+
+function filterArray(arr) {
+  return arr.filter((ele) => {
+    if (ele) return true;
+    else return false;
+  });
+}
+
+// console.log(filterArray([58, "", undefined, "abcd", true, null, false]));
+
+// Write a JavaScript function to generate an array of integer numbers, increasing one from the starting position, of a specified length.
+
+function generateArray(start, length) {
+  let arr = new Array(4);
+
+  for (let i = 0; i < length; i++) {
+    arr[i] = start++;
+  }
+  return arr;
+}
+
+// console.log(generateArray(-5, 10));
+
+/**
+ *
+ * Write a JavaScript function to generate an array between two integers of 1 step length.
+ */
+
+function generateArrayInRange(starting, ending) {
+  let arr = [];
+  let count = starting;
+  for (let i = 0; i <= ending - starting; i++) {
+    arr[i] = count++;
+  }
+  return arr;
+}
+
+console.log(generateArrayInRange(-5, 10));
